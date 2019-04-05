@@ -14,6 +14,7 @@ class MovieAdapter(var movies:List<Movie>, val clickLister:(Movie)->Unit):Recycl
 
 
     //INFLA CADA UNO DE LOS ELEMENTOS DE NUESTRA LIST EN LA VISTA
+    //INFORMACION QUEMADA QUE VIENE DEL XML cardview_movie
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.cardview_movie, parent,false)
         return ViewHolder(view)
@@ -40,10 +41,10 @@ class MovieAdapter(var movies:List<Movie>, val clickLister:(Movie)->Unit):Recycl
                 .placeholder(R.drawable.ic_launcher_background)
                 .into(movie_image_cv)
             //ID'S DEL XML
-            movie_title_cv.text=item.Title
-            movie_plot_cv.text=item.Plot
-            movie_rate_cv.text= item.imdbRating
-            movie_runtime_cv.text=item.Runtime
+            movie_title_cv.text = item.Title
+            movie_plot_cv.text = item.Plot
+            movie_rate_cv.text = item.imdbRating
+            movie_runtime_cv.text = item.Runtime
 
             this.setOnClickListener{clickListener(item)}
         }
