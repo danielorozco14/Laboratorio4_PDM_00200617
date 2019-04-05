@@ -11,6 +11,7 @@ class NetworkUtils {
 
     val MOVIES_API_BASEURL= "http://www.omdbapi.com/"
     val TOKEN_API="fb5a7e15"
+    //8b0b11f6
 
     fun buildSearchUrl(movieName:String):URL{
         val buildUri = Uri.parse(MOVIES_API_BASEURL)
